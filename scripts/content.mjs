@@ -42,7 +42,7 @@ export const projects = [
     lead: 'Checks customer payment screenshots against the seller\'s bank statement before an order ships.',
     year: '2026', role: 'Team Prompt-Forge, AICON\'26 hackathon', status: 'Live at milaan.app',
     stack: ['Python', 'FastAPI', 'React', 'TypeScript', 'Gemini vision', 'SQLite'],
-    repo: '', demo: 'https://milaan.app', demoLabel: 'Open milaan.app',
+    repo: 'https://github.com/bil332204-code/AiCON-2026-Milaan', demo: 'https://milaan.app', demoLabel: 'Open milaan.app',
     what: [
       'Small online sellers in Pakistan are paid by bank transfer or wallet, and customers send a screenshot as proof. Fake or reused screenshots are common, and checking each one against the statement by hand is slow.',
       'Milaan reads the screenshots, matches each claim against the seller\'s own statement and tells them which orders are safe to ship. Its rule: AI reads, code matches, the seller decides.',
