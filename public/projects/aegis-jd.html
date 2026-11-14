@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AEGIS-JD: A humanoid robot that responds to gestures, emotions, body pose and voice | Bilal Ahmed</title>
+<meta name="description" content="A humanoid robot that responds to gestures, emotions, body pose and voice. Built with Python, MediaPipe, DeepFace, Faster-Whisper.">
+<link rel="canonical" href="https://bilal-ahmed-builds.cyou/projects/aegis-jd">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bilal-ahmed-builds.cyou/projects/aegis-jd">
+<meta property="og:title" content="AEGIS-JD: A humanoid robot that responds to gestures, emotions, body pose and voice | Bilal Ahmed">
+<meta property="og:description" content="A humanoid robot that responds to gestures, emotions, body pose and voice. Built with Python, MediaPipe, DeepFace, Faster-Whisper.">
+<meta property="og:image" content="https://bilal-ahmed-builds.cyou/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#16181B">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/page.css">
+<script src="/_vercel/insights/script.js" defer></script>
+</head>
+<body style="--c:var(--blue)">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"AEGIS-JD","description":"A humanoid robot that responds to gestures, emotions, body pose and voice.","author":{"@type":"Person","name":"Bilal Ahmed","url":"https://bilal-ahmed-builds.cyou"},"dateCreated":"2026","keywords":"Python, MediaPipe, DeepFace, Faster-Whisper, Ollama / LLaMA, YOLOv8, Gemini, Flask, Firebase, EZ-Robot ARC","url":"https://bilal-ahmed-builds.cyou/projects/aegis-jd"}</script>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap top"><a class="logo" href="/">bilal.</a><a class="back" href="/#work">All projects</a></div>
+<main id="main" class="wrap">
+  <header class="p-hero">
+    <div class="mark" aria-hidden="true">JD</div>
+    <h1>AEGIS-JD</h1>
+    <p class="lead">A humanoid robot that responds to gestures, emotions, body pose and voice.</p>
+    <dl class="meta">
+      <div><dt>Year</dt><dd>2026</dd></div>
+      <div><dt>My role</dt><dd>Group leader and integration lead</dd></div>
+      <div><dt>Status</dt><dd>Completed (internship final project)</dd></div>
+      <div><dt>Main tools</dt><dd>Python, MediaPipe, DeepFace</dd></div>
+    </dl>
+    <div class="actions">
+      <a class="btn solid" href="https://youtu.be/DE5jxKxOTgs" rel="noopener">Watch the demo</a>
+      <a class="btn" href="https://github.com/bil332204-code/internship-robots" rel="noopener">View source code</a>
+      <a class="btn" href="/#contact">Ask me about it</a>
+    </div>
+  </header>
+
+  <section class="block"><h2>What it does</h2><div><p>AEGIS-JD (Autonomous Engagement &amp; Guardian Intelligence System) is a unified control system for the EZ-Robot JD humanoid, built over a six-week internship at the Educational Robotics Lab, NUST SEECS.</p><p>It brings gesture, emotion, pose and speech control together with a conversational assistant, object detection and a face-recognition security gate in one application, replacing what began as several separate demo scripts.</p></div></section>
+  <section class="block"><h2>How it works</h2><ol class="steps"><li><b>Input</b><span>A webcam and microphone on a companion laptop capture the person in front of JD.</span></li><li><b>Perception</b><span>MediaPipe reads seven hand gestures and body pose, DeepFace reads facial emotion, Faster-Whisper transcribes speech locally and YOLOv8 finds objects.</span></li><li><b>Security gate</b><span>Face recognition (DeepFace / Facenet) decides whether the current person is authorised before JD acts.</span></li><li><b>Decision</b><span>Rules map readings to actions. &quot;Ask JD&quot; answers questions with LLaMA models running on Ollama, and Gemini interprets requests like &quot;find my bottle&quot;.</span></li><li><b>Output</b><span>Commands go to JD over Wi-Fi through EZ-Robot ARC and EZ-Script, from a terminal controller or a Flask browser dashboard.</span></li></ol></section>
+  <section class="block"><h2>What I did</h2><ul class="mine"><li>Led the five-person team and merged the separately built modules into one terminal controller and Flask dashboard.</li><li>Built the gesture, emotion, pose and speech control modes.</li><li>Made vision control reliable: a reading must hold in 8 of the last 10 frames, then a 5-second cooldown, before JD moves. This stops single-frame misfires.</li><li>Co-developed &quot;Ask JD&quot; with Sameen Fatima: typed or spoken chat, 50 messages of history, a fast model for small talk and an 8B model for harder questions.</li><li>Proposed using face recognition as a security gate and integrated it. The detection and recognition modules themselves were built by teammates Ahmed, Asjid and Sajid.</li></ul></section>
+  <section class="block"><h2>Built with</h2><ul class="chips"><li>Python</li><li>MediaPipe</li><li>DeepFace</li><li>Faster-Whisper</li><li>Ollama / LLaMA</li><li>YOLOv8</li><li>Gemini</li><li>Flask</li><li>Firebase</li><li>EZ-Robot ARC</li></ul></section>
+
+  <nav class="pn" aria-label="More projects">
+    <a href="/projects/smart-house-management"><small>Previous project</small><strong>Smart Electricity Management</strong></a>
+    <a class="nx" href="/projects/milaan"><small>Next project</small><strong>Milaan</strong></a>
+  </nav>
+</main>
+<footer><div class="wrap"><span>© 2026 Bilal Ahmed · Islamabad</span><span><a href="/#contact">Contact</a> · <a href="https://github.com/bil332204-code" rel="me">GitHub</a></span></div></footer>
+</body>
+</html>

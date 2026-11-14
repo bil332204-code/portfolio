@@ -1,0 +1,14 @@
+{
+  "name": "bilal-ahmed-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portfolio site for Bilal Ahmed (bilal-ahmed-builds.cyou)",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "vercel dev",
+    "local": "node scripts/serve.mjs",
+    "test": "node scripts/test-api.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

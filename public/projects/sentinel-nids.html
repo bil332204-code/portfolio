@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sentinel NIDS: A network intrusion detection system that combines behaviour rules with machine learning | Bilal Ahmed</title>
+<meta name="description" content="A network intrusion detection system that combines behaviour rules with machine learning. Built with Python, Scapy, scikit-learn (Isolation Forest), FastAPI.">
+<link rel="canonical" href="https://bilal-ahmed-builds.cyou/projects/sentinel-nids">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bilal-ahmed-builds.cyou/projects/sentinel-nids">
+<meta property="og:title" content="Sentinel NIDS: A network intrusion detection system that combines behaviour rules with machine learning | Bilal Ahmed">
+<meta property="og:description" content="A network intrusion detection system that combines behaviour rules with machine learning. Built with Python, Scapy, scikit-learn (Isolation Forest), FastAPI.">
+<meta property="og:image" content="https://bilal-ahmed-builds.cyou/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#16181B">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/page.css">
+<script src="/_vercel/insights/script.js" defer></script>
+</head>
+<body style="--c:var(--orange)">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Sentinel NIDS","description":"A network intrusion detection system that combines behaviour rules with machine learning.","author":{"@type":"Person","name":"Bilal Ahmed","url":"https://bilal-ahmed-builds.cyou"},"dateCreated":"2026","keywords":"Python, Scapy, scikit-learn (Isolation Forest), FastAPI, SQLite","url":"https://bilal-ahmed-builds.cyou/projects/sentinel-nids"}</script>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap top"><a class="logo" href="/">bilal.</a><a class="back" href="/#work">All projects</a></div>
+<main id="main" class="wrap">
+  <header class="p-hero">
+    <div class="mark" aria-hidden="true">S</div>
+    <h1>Sentinel NIDS</h1>
+    <p class="lead">A network intrusion detection system that combines behaviour rules with machine learning.</p>
+    <dl class="meta">
+      <div><dt>Year</dt><dd>2026</dd></div>
+      <div><dt>My role</dt><dd>Information Security semester project</dd></div>
+      <div><dt>Status</dt><dd>Prototype completed</dd></div>
+      <div><dt>Main tools</dt><dd>Python, Scapy, scikit-learn (Isolation Forest)</dd></div>
+    </dl>
+    <div class="actions">
+      
+      <a class="btn solid" href="https://github.com/bil332204-code" rel="me noopener">More on my GitHub</a>
+      <a class="btn" href="/#contact">Ask me about it</a>
+    </div>
+  </header>
+
+  <section class="block"><h2>What it does</h2><div><p>Sentinel processes PCAP and PCAPNG network captures, flags port scans, suspected brute-force attempts and unusual traffic, and shows each alert with the evidence behind it.</p><p>It is a detector, not a blocker: it explains what it saw, from which source to which destination and why, so an analyst can investigate.</p></div></section>
+  <section class="block"><h2>How it works</h2><ol class="steps"><li><b>Capture</b><span>Traffic comes from a stored capture or, optionally, live from a local interface with Scapy.</span></li><li><b>Window</b><span>Packets are grouped by source and destination into 10-second windows with counts of flows, ports and packets.</span></li><li><b>Detect</b><span>Behaviour rules catch scans and repeated access attempts, and an Isolation Forest flags windows that look abnormal.</span></li><li><b>Explain</b><span>Alerts are stored in SQLite and shown on a FastAPI dashboard with the features that triggered them.</span></li></ol></section>
+  <section class="block"><h2>What I did</h2><ul class="mine"><li>Built for the CS-353 Information Security course at NUST SEECS.</li><li>On a 130-window test set the hybrid detector caught all 60 attack or anomalous windows, with 12 false alarms out of 70 benign windows.</li></ul></section>
+  <section class="block"><h2>Built with</h2><ul class="chips"><li>Python</li><li>Scapy</li><li>scikit-learn (Isolation Forest)</li><li>FastAPI</li><li>SQLite</li></ul></section>
+
+  <nav class="pn" aria-label="More projects">
+    <a href="/projects/milaan"><small>Previous project</small><strong>Milaan</strong></a>
+    <a class="nx" href="/projects/fixit"><small>Next project</small><strong>FixIt</strong></a>
+  </nav>
+</main>
+<footer><div class="wrap"><span>© 2026 Bilal Ahmed · Islamabad</span><span><a href="/#contact">Contact</a> · <a href="https://github.com/bil332204-code" rel="me">GitHub</a></span></div></footer>
+</body>
+</html>
