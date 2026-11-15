@@ -43,6 +43,21 @@ hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();
   card.style.setProperty('--sx',((px+.5)*100)+'%');card.style.setProperty('--sy',((py+.5)*100)+'%')});
 hero.addEventListener('pointerleave',()=>{card.style.setProperty('--ry','0deg');card.style.setProperty('--rx','0deg')});
 
+/* showreel: plays muted while on screen, sound toggle, scroll-in tilt */
+const reelV=$('#reelVideo'),reelF=$('#reelFrame'),reelS=$('#reelSound'),reelP=$('#reelPlay');
+if(reelV){
+  const tryPlay=()=>{const p=reelV.play();if(p&&p.catch)p.catch(()=>{reelP.hidden=false})};
+  if(reduce){reelP.hidden=false}
+  else new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)tryPlay();else reelV.pause()}),{threshold:.35}).observe(reelV);
+  reelP.addEventListener('click',()=>{reelP.hidden=true;tryPlay()});
+  reelS.addEventListener('click',()=>{reelV.muted=!reelV.muted;const on=!reelV.muted;
+    reelS.setAttribute('aria-pressed',on);reelS.querySelector('.lbl').textContent=on?'Sound on':'Sound off';
+    if(on){reelP.hidden=true;tryPlay()}});
+  if(!reduce){const tilt=()=>{const r=reelF.getBoundingClientRect();const k=Math.max(0,Math.min(1,(innerHeight-r.top)/(innerHeight*.75)));
+    reelF.style.setProperty('--rrx',(10*(1-k)).toFixed(2)+'deg');reelF.style.setProperty('--rs',(.92+.08*k).toFixed(3))};
+    addEventListener('scroll',tilt,{passive:true});addEventListener('resize',tilt);tilt()}
+}
+
 /* certificate tilt + light sweep */
 const certArt=$('#certArt');
 if(certArt&&!reduce){const paper=certArt.querySelector('.cert-paper');
