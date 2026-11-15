@@ -5,6 +5,9 @@
   "outputDirectory": "public",
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/visits", "destination": "/api/visits" }
+  ],
   "redirects": [
     { "source": "/cv", "destination": "/resume", "permanent": true },
     { "source": "/projects", "destination": "/#work", "permanent": false },

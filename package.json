@@ -10,5 +10,6 @@
     "local": "node scripts/serve.mjs",
     "test": "node scripts/test-api.mjs"
   },
-  "engines": { "node": "22.x" }
+  "engines": { "node": "22.x" },
+  "dependencies": { "@vercel/blob": "^2.9.0" }
 }

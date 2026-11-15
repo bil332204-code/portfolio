@@ -31,6 +31,7 @@ const head = ({ title, desc, path, image = '/og.png' }) => `<!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/page.css">
 <script src="/_vercel/insights/script.js" defer></script>
+<script src="/assets/visit.js" defer></script>
 </head>`;
 
 const topbar = (backHref, backText) => `

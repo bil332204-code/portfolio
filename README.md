@@ -113,6 +113,15 @@ Until you verify a domain, Resend's test sender (`onboarding@resend.dev`) can on
 - Test the share preview: paste the link into WhatsApp or the LinkedIn Post Inspector.
 - Put the link in your GitHub profile, LinkedIn, CV and email signature.
 
+## Visitor log (who visited and when)
+
+Every page load is saved to a private Vercel Blob store (`portfolio-visits`): time, page, city/country, device and browser, where they came from, and a short visitor ID (a scrambled code made from their network + browser; the IP itself is never stored).
+
+- **See it:** https://bilal-ahmed-portfolio-outlaw7.vercel.app/visits (asks for your Vercel login). On the public domain `/visits` shows nothing.
+- **Don't count yourself:** open `https://bilal-ahmed-builds.cyou/?me=1` once on each of your browsers (`?me=0` undoes it).
+- **Track where a link was clicked:** add `?ref=linkedin` (or `?utm_source=cv`, etc.) to links you share; it shows under "Came from".
+- Files: `public/assets/visit.js` (sends the visit), `api/visit.js` (saves it), `api/visits.js` (the dashboard). Needs `BLOB_READ_WRITE_TOKEN`, which Vercel adds automatically because the store is connected to the project.
+
 ## Changing things later
 
 | To change… | Edit | Then |
