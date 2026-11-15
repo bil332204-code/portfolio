@@ -43,6 +43,13 @@ hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();
   card.style.setProperty('--sx',((px+.5)*100)+'%');card.style.setProperty('--sy',((py+.5)*100)+'%')});
 hero.addEventListener('pointerleave',()=>{card.style.setProperty('--ry','0deg');card.style.setProperty('--rx','0deg')});
 
+/* certificate tilt + light sweep */
+const certArt=$('#certArt');
+if(certArt&&!reduce){const paper=certArt.querySelector('.cert-paper');
+  certArt.addEventListener('pointermove',e=>{const r=paper.getBoundingClientRect();const px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;
+    paper.style.setProperty('--ry',(px*14)+'deg');paper.style.setProperty('--rx',(-py*10)+'deg');paper.style.setProperty('--gx',(100-(px+.5)*120)+'%')});
+  certArt.addEventListener('pointerleave',()=>{['--ry','--rx','--gx'].forEach(p=>paper.style.removeProperty(p))})}
+
 /* doors */
 const rooms={
   ai:{t:'AI & Robotics',c:'var(--blue)',items:[['AEGIS-JD','Humanoid robot that responds to gesture, emotion, pose and voice.','Python · OpenCV · MediaPipe','aegis-jd'],['Milaan','Checks payment screenshots against the seller\'s statement before shipping.','FastAPI · React · Gemini','milaan']]},
