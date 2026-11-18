@@ -8,8 +8,13 @@
     "build": "node scripts/build.mjs",
     "dev": "vercel dev",
     "local": "node scripts/serve.mjs",
-    "test": "node scripts/test-api.mjs"
+    "test": "node scripts/test-api.mjs && node scripts/test-tailor.mjs"
   },
-  "engines": { "node": "22.x" },
-  "dependencies": { "@vercel/blob": "^2.9.0" }
+  "engines": {
+    "node": "22.x"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.9.0",
+    "pdf-lib": "^1.17.1"
+  }
 }

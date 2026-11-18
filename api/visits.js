@@ -138,7 +138,7 @@ export default async function handler(req, res) {
     ? `<div class="tbl"><table><thead><tr><th>When (PKT)</th><th>Visitor</th><th>Location</th><th>Device</th><th>Page</th><th>Came from</th></tr></thead><tbody>${rows}</tbody></table></div>`
     : '<div class="tbl"><p class="empty">No visits recorded yet. They\'ll appear here as people open bilal-ahmed-builds.cyou.</p></div>';
 
-  const nav = `<div class="nav"><a href="/visits">↻ Newest</a>${next ? `<a href="/visits?cursor=${encodeURIComponent(next)}">Older visits →</a>` : ''}</div>`;
+  const nav = `<div class="nav"><a href="/visits">↻ Newest</a><a href="/resume-builder">Résumé builder</a>${next ? `<a href="/visits?cursor=${encodeURIComponent(next)}">Older visits →</a>` : ''}</div>`;
 
   return send(res, 200, page('Visitor log | bilal.', `
     <h1>Who visited your portfolio</h1>

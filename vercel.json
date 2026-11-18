@@ -6,8 +6,13 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/visits", "destination": "/api/visits" }
+    { "source": "/visits", "destination": "/api/visits" },
+    { "source": "/resume-builder", "destination": "/api/resume-builder" },
+    { "source": "/resume-builder.js", "destination": "/api/resume-builder?asset=js" }
   ],
+  "functions": {
+    "api/tailor.js": { "maxDuration": 60 }
+  },
   "redirects": [
     { "source": "/cv", "destination": "/resume", "permanent": true },
     { "source": "/projects", "destination": "/#work", "permanent": false },

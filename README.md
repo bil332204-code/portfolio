@@ -122,6 +122,16 @@ Every page load is saved to a private Vercel Blob store (`portfolio-visits`): ti
 - **Track where a link was clicked:** add `?ref=linkedin` (or `?utm_source=cv`, etc.) to links you share; it shows under "Came from".
 - Files: `public/assets/visit.js` (sends the visit), `api/visit.js` (saves it), `api/visits.js` (the dashboard). Needs `BLOB_READ_WRITE_TOKEN`, which Vercel adds automatically because the store is connected to the project.
 
+## Private résumé / CV builder
+
+Paste a job description, pick **Résumé** (1 page) or **CV** (full, 2–3 pages), and get a PDF tailored to that job.
+The AI only picks, reorders and rewords facts from your profile. It never invents experience, and it lists the job's requirements you don't have so you can see the gaps.
+
+- **Open it:** https://bilal-ahmed-portfolio-outlaw7.vercel.app/resume-builder (asks for your Vercel login). On the public domain it shows nothing, and the API refuses to run, so nobody else can use your AI quota.
+- **One-time setup:** get a free Gemini key at aistudio.google.com/apikey → Vercel → project → Settings → Environment Variables → add `GEMINI_API_KEY` (Production + Preview) → redeploy. (Or `ANTHROPIC_API_KEY` for Claude.) If Google renames its models, set `GEMINI_MODEL`.
+- **Your facts:** `api/_profile.js` (education, experience, skills, certificates) plus the projects in `scripts/content.mjs`. Add anything new there and push.
+- Files: `api/resume-builder.js` (the page), `api/tailor.js` (makes the PDF), `api/_ai.js` (the prompt), `api/_pdf.js` (the layout).
+
 ## Changing things later
 
 | To change… | Edit | Then |
